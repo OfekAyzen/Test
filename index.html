@@ -15,71 +15,73 @@
     />
   </head>
   <body>
-    <form class="container" onsubmit="calRect(event)">
-      <header>
-        <h1>Rectangle Calculator</h1>
-      </header>
-      <main class="justify-content-start">
-        <div class="col-md-3">
-          <label class="form-label">Width</label>
-          <input
-            type="number"
-            class="form-control"
-            id="width"
-            required
-            min="1"
-            max="300"
-          />
+    <div class="container">
+      <h1>Rectangle Calculator</h1>
+      <div class="row">
+        <div class="col-sm-12 col-md-4">
+          <form class="m-4" onsubmit="calRect(event)">
+            <div class="md-3">
+              <label class="form-label">Width</label>
+              <input
+                type="number"
+                class="form-control"
+                id="width"
+                required
+                min="1"
+                max="300"
+              />
+            </div>
+            <div class="md-3">
+              <label class="form-label">Height</label>
+              <input
+                type="number"
+                class="form-control"
+                id="height"
+                required
+                min="1"
+                max="300"
+              />
+            </div>
+            <div class="md-3">
+              <label class="form-label">Position (X)</label>
+              <input
+                type="number"
+                class="form-control"
+                id="x"
+                required
+                min="1"
+                max="300"
+              />
+            </div>
+            <div class="md-3">
+              <label class="form-label">Position (Y)</label>
+              <input
+                type="number"
+                class="form-control"
+                id="y"
+                required
+                min="1"
+                max="300"
+              />
+            </div>
+            <div class="form-label">
+              <span id="rectSpace">Rectangle Area:</span>
+            </div>
+            <button class="btn btn-success" id="calBtn">
+              Calculate &amp; Draw
+            </button>
+            <button class="btn btn-danger" id="resetBtn">Reset</button>
+          </form>
         </div>
-        <div class="col-md-3">
-          <label class="form-label">Height</label>
-          <input
-            type="number"
-            class="form-control"
-            id="height"
-            required
-            min="1"
-            max="300"
-          />
-        </div>
-        <div class="col-md-3">
-          <label class="form-label">Position (X)</label>
-          <input
-            type="number"
-            class="form-control"
-            id="x"
-            required
-            min="1"
-            max="300"
-          />
-        </div>
-        <div class="col-md-3">
-          <label class="form-label">Position (Y)</label>
-          <input
-            type="number"
-            class="form-control"
-            id="y"
-            required
-            min="1"
-            max="300"
-          />
-        </div>
-        <div class="form-label">
-          <span id="rectSpace">Rectangle Area:</span>
-        </div>
-        <button class="btn btn-success" id="calBtn">
-          Calculate &amp; Draw
-        </button>
-        <button class="btn btn-danger" id="resetBtn">Reset</button>
-        <div class="position-relative">
+        <div class="col-sm-12 col-md-8">
           <canvas
             id="myCanvas"
-            class="border border-dark offset-4"
+            class="border border-dark"
             width="300"
             height="300"
           ></canvas>
         </div>
-      </main>
-    </form>
+      </div>
+    </div>
   </body>
 </html>
