@@ -63,8 +63,17 @@ function drawSomething() {
   const y = +yBox.value;
   const canvas = document.querySelector("#myCanvas");
   const painter = canvas.getContext(`2d`);
-  painter.fillStyle = "blue";
+  painter.fillStyle = chooseColor(counter);
   painter.fillRect(x, y, width, height);
+  counter++;
+}
+
+function chooseColor(count) {
+  if (count > colors.length) {
+    counter = 0;
+  }
+  const i = count;
+  return colors[i];
 }
 
 function reset(event) {
@@ -149,3 +158,16 @@ function onWindowLoad() {
   loadLocal();
 }
 window.onload = onWindowLoad;
+
+const colors = [
+  "red",
+  "blue",
+  "yellow",
+  "green",
+  "orange",
+  "purple",
+  "brown",
+  "#fffdd0",
+];
+
+let counter = 0;
