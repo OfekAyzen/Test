@@ -69,8 +69,8 @@ function drawSomething() {
 }
 
 function chooseColor(count) {
-  if (count > colors.length) {
-    counter = 0;
+  if (count >= 7) {
+    counter = -1;
   }
   const i = count;
   return colors[i];
